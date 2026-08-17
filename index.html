@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tặng Bội</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="16" fill="#E8604C"/>
+          <path d="M10 16L16 10L22 16L16 22L10 16Z" fill="white"/>
+        </svg>
+        <span>Tặng Bội</span>
+      </a>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Home</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="btn-login">Lưu lại để dành</a>
+        <a href="#" class="btn-signup">Đi luôn</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><span class="hero-highlight">Tự do</span><br>là món quà vô giá</h1>
+      <p>Đi đến nơi em thích</p>
+    </div>
+    <div class="hero-search">
+      <div class="search-field">
+        <label>Destination</label>
+        <input type="text" placeholder="Where to go?">
+      </div>
+      <div class="search-field">
+        <label>Person</label>
+        <input type="text" placeholder="How many?">
+      </div>
+      <div class="search-field">
+        <label>Check in</label>
+        <input type="date">
+      </div>
+      <div class="search-field">
+        <label>Check out</label>
+        <input type="date">
+      </div>
+      <button class="btn-book" onclick="alert('Gọi cho anh nhé em')">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section class="destinations">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Nơi ấy ở Hà Giang</h2>
+          <p>Những nơi cũng chưa từng đặt chân đến.</p>
+        </div>
+        <div class="nav-arrows">
+          <button class="arrow-btn" aria-label="Previous">&larr;</button>
+          <button class="arrow-btn" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+      <div class="destinations-grid">
+        <div class="destination-card">
+          <img src="/assets/images/1.webp" alt="Cổng Trời">
+          <div class="destination-overlay">
+            <h3>Cổng Trời</h3>
+            <span>Hà Giang</span>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="/assets/images/2.jfif" alt="Dốc Chín Khoanh">
+          <div class="destination-overlay">
+            <h3>Dốc Chín Khoanh</h3>
+            <span>Hà Giang</span>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="/assets/images/3.jpg" alt="Làng Lũng Cẩm">
+          <div class="destination-overlay">
+            <h3>Làng Lũng Cẩm</h3>
+            <span>Hà Giang</span>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="/assets/images/4.jpg" alt="Đèo Mã Pí Lèng">
+          <div class="destination-overlay">
+            <h3>Đèo Mã Pí Lèng</h3>
+            <span>Hà Giang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offer -->
+  <section class="special-offer">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Chỗ ăn chỗ uống</h2>
+          <p>Ăn gì cũng được, măm măm</p>
+        </div>
+        <div class="nav-arrows">
+          <button class="arrow-btn" aria-label="Previous">&larr;</button>
+          <button class="arrow-btn" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <img src="/assets/images/food/1.jpg" alt="Bánh Cuốn Trứng">
+          <div class="offer-info">
+            <span class="offer-location">Bánh Cuốn Trứng</span>
+            <div class="offer-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Bánh cuốn nóng hổi, trứng tráng mỏng bên trong, chấm nước mắm chua ngọt.</p>
+            <div class="offer-price">
+              <span class="price">25k - 40k</span>
+              <button class="btn-details">Ăn luôn</button>
+            </div>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="/assets/images/food/2.jpeg" alt="Cơm Lam Bắc Mê">
+          <div class="offer-info">
+            <span class="offer-location">Cơm Lam Bắc Mê</span>
+            <div class="offer-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Cơm nếp nướng trong ống tre, thơm lừng vị núi rừng Bắc Mê.</p>
+            <div class="offer-price">
+              <span class="price">30k</span>
+              <button class="btn-details">Ăn luôn</button>
+            </div>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="/assets/images/food/3.jpg" alt="Xôi Ngũ Sắc">
+          <div class="offer-info">
+            <span class="offer-location">Xôi Ngũ Sắc</span>
+            <div class="offer-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Xôi nếp năm màu tự nhiên, dẻo thơm đặc trưng vùng cao.</p>
+            <div class="offer-price">
+              <span class="price">20k - 30k</span>
+              <button class="btn-details">Ăn luôn</button>
+            </div>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="/assets/images/food/4.jpg" alt="Thắng Cố">
+          <div class="offer-info">
+            <span class="offer-location">Thắng Cố</span>
+            <div class="offer-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Lẩu đặc sản vùng cao, tùy mình ăn ít hay gọi lẩu.</p>
+            <div class="offer-price">
+              <span class="price">Tùy mood</span>
+              <button class="btn-details">Ăn luôn</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Gửi em</h2>
+          <p>Ngày hôm nay em có được thoải mái, thư thả chứ?</p>
+        </div>
+      </div>
+
+      <!-- Entry 1: image left, text right -->
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/1.JPG" alt="Gửi em 1">
+        </div>
+        <div class="blog-text">
+          <h3>Lời mở đầu</h3>
+          <p>11h đêm 16/8, sau cuộc điện thoại với bạn anh, bạn Vân,<br>anh bắt đầu viết những dòng này.<br><br>Anh mong em có thể đến và trải nghiệm nơi em thích.<br>Cám ơn Vân đã giúp anh. Em có thể tin tưởng bạn ấy.<br>Bạn đã có một chuyến đi đáng nhớ đến nơi em thích.</p>
+        </div>
+      </div>
+
+      <!-- Entry 2: text left, image right -->
+      <div class="blog-content reverse">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/2.jpg" alt="Gửi em 2">
+        </div>
+        <div class="blog-text">
+          <h3>Thử thách phía trước</h3>
+          <p>Chuyến đi sẽ rất thử thách thể chất em nhé.<br>Em sẽ phải ngồi xe ô tô suốt 500 km.<br>Nó sẽ tốn của em gần một ngày đi và một ngày về trên xe.<br><br>Cả một ngày trời đi từ Hà Nội lên, và sau đó em còn phải trải qua một ngày nữa để từ Hà Giang về Hà Nội. Đường đi hiểm trở.<br><br>Băng qua những dãy núi đá xám xịt kia,<br>đó là bầu trời mới, là mặt trời,<br>là những khám phá mới mà tuổi trẻ và sự tự do sẽ mang đến cho em.</p>
+        </div>
+      </div>
+
+      <!-- Entry 3: image left, text right -->
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/3.JPG" alt="Gửi em 3">
+        </div>
+        <div class="blog-text">
+          <h3>Kế hoạch chuyến đi</h3>
+          <p>Anh nghĩ là hôm đó em đến với Hà Giang, mọi thứ sẽ đổi xíu.<br>V khuyên là mình sẽ đi Hà Giang vào tháng 10 đến tháng 12<br>(cái này là mình sẽ đi vào dịp cuối năm rồi, lúc đó thì em chắc là bận).<br>Biết đâu đấy, tìm một dịp dài hơn như kì nghỉ 2/9 ổn.<br><br>Đợt V đi thì mất 2 ngày 3 đêm em nhé,<br>nếu em đi mình chọn 5 ngày 6 đêm để có thời gian ở Hà Nội và Hà Giang.<br>Anh nhìn hình thôi nhưng anh cũng thấy là tour này có những nét riêng có của nó.</p>
+        </div>
+      </div>
+
+      <!-- Entry 4: text left, image right -->
+      <div class="blog-content reverse">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/4 1.jpg" alt="Gửi em 4">
+        </div>
+        <div class="blog-text">
+          <h3>Kinh phí</h3>
+          <p>Kinh phí thì ổn,<br>khoảng 10 tr cho 2-3 đêm (tiết kiệm),<br>còn chắc tầm 15 tr là ổn em hen.<br><br>Tiền riêng tour là khoảng 4 tr cho cái đầu á em.</p>
+        </div>
+      </div>
+
+      <!-- Entry 5: image left, text right -->
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/5.jpg" alt="Gửi em 5">
+        </div>
+        <div class="blog-text">
+          <h3>Mùa hoa cuối năm</h3>
+          <p>Ở Hà Giang thì người bản địa có thể nói được ba thứ tiếng đó,<br>tiếng Việt, tiếng Anh và bản ngữ.<br><br>Thời gian cuối năm đó sẽ là mùa của hoa đào.<br>Màu hồng hồng đậm, rất đẹp.<br>Em có thể nhắm mắt và tưởng tượng ra cây hoa cải nữa.<br>Màu vàng, màu cánh đồng hoa cải tuyệt đẹp.<br><br>Em có thể thấy được hoa tam giác mạch.<br>Anh còn chưa biết hoa đó như thế nào nữa, nhưng mà hoa đó rất đẹp.</p>
+        </div>
+      </div>
+
+      <!-- Entry 6: text left, image right -->
+      <div class="blog-content reverse">
+        <div class="blog-image">
+          <img src="/assets/images/guiem/6.jpg" alt="Gửi em 6">
+        </div>
+        <div class="blog-text">
+          <h3>Lời nhắn gửi</h3>
+          <p>Hy vọng em sẽ có được bức hình mà em ưng ý.<br><br>Em có thể book người hướng dẫn bằng xe máy sẽ tốt hơn.<br>Người ta sẽ chở em bằng xe máy đi vào được những cái thôn làng ở bên trong.<br>Nhiều khi em lại có được cái em thích.<br><br>Còn V đi xe 16 chỗ, đi theo đoàn,<br>bạn còn có kỷ niệm tình nguyện ở đó nữa.<br>Em có thể hỏi V nhé, hi vọng em thích.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Mọi người ở Hà Giang -->
+  <section class="ha-giang-people">
+    <div class="container">
+      <div class="section-header center">
+        <h2>Mọi người ở Hà Giang</h2>
+      </div>
+      <div class="blog-content">
+        <div class="blog-text">
+          <p>Em còn nhớ chị giáo viên Hà Giang mà anh kể với em hôm mình gặp ở GoGi House<br>khi anh ngỏ lời mời em đi chơi lễ không?<br><br>Hì, đó là chị Dính, 20 năm chị đi dạy cho các em vùng cao.<br>Trùng hợp quá chị mới được lên VTV luôn em.<br><br>Câu chuyện của chị hay. Khi nào em rãnh,<br>anh xin em chút thời gian hai mình cùng nghe chia sẻ của chị nhé,<br>chị sẽ kể em nghe về tình yêu với nghề<br>và tình cảm chân thành sẽ mang tới những điều tuyệt vời.<br><br>Chắc em bấm từ phút 38 nhen nhen, đoạn chị nói khoảng 7 phút.<br>Ở nơi đó, mình tìm đến núi, đá, con nước và bầu trời.<br>Mình cũng tìm đến niềm vui và tình cảm chân thật từ mọi người,<br>thật vui vẻ khi ta được gặp nhau sau bao cách trở sông núi.</p>
+        </div>
+      </div>
+      <div class="video-embed">
+        <a href="https://www.facebook.com/share/v/1bCs7Cwjja/" target="_blank" rel="noopener" class="video-link">
+          <img src="https://images.pexels.com/photos/36582384/pexels-photo-36582384/free-photo-of-traditional-scene-with-hmong-women-in-ha-giang.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Video - Chị Dính giáo viên vùng cao Hà Giang">
+          <div class="video-play-btn">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none">
+              <circle cx="34" cy="34" r="34" fill="rgba(255,255,255,0.9)"/>
+              <polygon points="28,20 28,48 50,34" fill="#E8604C"/>
+            </svg>
+          </div>
+          <span class="video-caption">Xem video trên Facebook - Chị Dính, 20 năm dạy học vùng cao (từ phút 38)</span>
+        </a>
+      </div>
+      <div class="blog-content">
+        <div class="blog-text">
+          <p>Giá mà anh có thể đi cùng với em như lời ngỏ hôm ấy,<br>lên đó, gặp chị Dính, anh cũng mong lên chơi với chị lắm.<br><br>Chị chắc chắn sẽ vui khi thấy em Quảng có ai đó để đi cùng nè.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Vài ảnh đẹp nơi ấy</h2>
+          <p>Anh search google nhanh thôi, thật hấp dẫn</p>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item large"><img src="/assets/images/gallery/du-lich-ha-giang-ma-pi-leng.jpg" alt="Mã Pí Lèng"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/hagiang-spring.jpg" alt="Hà Giang mùa xuân"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/dan-toc-thieu-so.jpg" alt="Dân tộc thiểu số"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/doc-tham-ma-ha-giang-6.jpeg" alt="Dốc Thẩm Mã"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/deo-ma-pi-leng-7-820x1024.webp" alt="Đèo Mã Pí Lèng"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/ff84313d263b472a8c5aac7434413d30.webp" alt="Cảnh đẹp Hà Giang"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/2024_08_08_03_13_559.jpg" alt="Hà Giang 2024"></div>
+        <div class="gallery-item"><img src="/assets/images/gallery/se-xay-diem-dung-nghi-moi-phuc-vu-du-khach-ngam-toan-canh-ma-pi-lengdocx-1572916181984.webp" alt="Toàn cảnh Mã Pí Lèng"></div>
+      </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="section-header center">
+        <h2>Traveler's Experiences</h2>
+        <p>Here some awesome feedback from our travelers</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="John Doe">
+            <div>
+              <strong>John Doe</strong>
+              <span>Accountant</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="John Smith">
+            <div>
+              <strong>John Smith</strong>
+              <span>Journalist, HWO News</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Tamara Bellis">
+            <div>
+              <strong>Tamara Bellis</strong>
+              <span>Managing Director, JTH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trip Planners -->
+  <section class="trip-planners">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Trip Planners</h2>
+          <p>20 years from now you will be more disappointed by the things that you didn't do. Stop regretting and start travelling, start throwing off the bowlines.</p>
+        </div>
+        <a href="#" class="btn-viewall">View all trip plans</a>
+      </div>
+      <div class="planners-grid">
+        <div class="planner-card">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=500&fit=crop" alt="Paris City Tour">
+          <div class="planner-overlay">
+            <h3>Paris City Tour</h3>
+          </div>
+        </div>
+        <div class="planner-card">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=400&h=500&fit=crop" alt="Venice Adventure">
+          <div class="planner-overlay">
+            <h3>Venice Adventure</h3>
+          </div>
+        </div>
+        <div class="planner-card">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&h=500&fit=crop" alt="London Explorer">
+          <div class="planner-overlay">
+            <h3>London Explorer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Our Newsletter</h2>
+        <div class="newsletter-form">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+          </div>
+          <button class="btn-subscribe">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Supports</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>+123 456 789</li>
+            <li>info@travellian.com</li>
+            <li>1245, New York, USA</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us on</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; Travellian 2020 All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
