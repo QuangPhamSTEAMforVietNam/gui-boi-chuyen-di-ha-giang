@@ -1146,3 +1146,78 @@
     margin-right: 8px;
   }
 }
+
+/* ============================================
+   BLOG SECTION - Lời ngỏ
+   ============================================ */
+
+.blog-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fdf8f6 0%, #fff5f2 100%);
+}
+
+.blog-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.blog-content p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+.blog-content p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 40px 0;
+}
+
+.blog-closing {
+  font-style: normal;
+  text-align: center !important;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.blog-closing em {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 48px 0;
+  }
+  
+  .blog-content {
+    padding: 32px 24px;
+    margin: 0 16px;
+  }
+  
+  .blog-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+  }
+  
+  .blog-closing em {
+    font-size: 18px;
+  }
+}
