@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tặng Bội — Hà Nội 2N1Đ</title>
+  <title>Tặng Bội — Hà Nội 2N1Đ (Phương án 2)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,11 +24,10 @@
       <nav class="nav">
         <a href="/" class="nav-link">Hà Giang</a>
         <a href="/hanoi.html" class="nav-link active">Hà Nội</a>
-        <a href="/hanoi2.html" class="nav-link">Hà Nội 2</a>
       </nav>
       <div class="header-actions">
-        <a href="/hanoi.html" class="btn-login">Hà Nội 1</a>
-        <a href="/hanoi2.html" class="btn-signup">Hà Nội 2</a>
+        <a href="/" class="btn-login">Hà Giang</a>
+        <a href="/hanoi.html" class="btn-signup">Hà Nội</a>
       </div>
       <button class="mobile-menu-btn" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -37,10 +36,10 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero hero-hanoi">
+  <section class="hero hero-hanoi hero-hanoi2">
     <div class="hero-content">
       <h1><span class="hero-highlight">Hà Nội</span><br>2 ngày 1 đêm</h1>
-      <p>Tour gia đình — Ở nhà cô Liên, khu Cầu Giấy</p>
+      <p>Đi nhóm đâu đó thật xa dịp lễ này</p>
     </div>
   </section>
 
@@ -49,26 +48,54 @@
     <div class="container">
       <div class="section-header center">
         <h2>Nơi mình ở</h2>
-        <p>Nhận phòng 09:00 — Không gian gia đình ấm cúng</p>
+        <p>Nhà Cô Liên, một nơi rất ấm cúng</p>
       </div>
       <div class="hotel-card">
         <div class="hotel-image">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=500&fit=crop" alt="Nhà cô Liên">
+          <img src="/assets/images/nha-co-lien/main.jpg" alt="Nhà cô Liên">
         </div>
         <div class="hotel-info">
           <h3>Auntie Lien's Homestay</h3>
-          <span class="hotel-stars">Nhà cô Liên — Làng Vòng</span>
+          <span class="hotel-stars">Nhà cô Liên Trường Chu Văn An</span>
           <p class="hotel-address">32 Ng. 133 Đ. Xuân Thủy, Làng Vòng, Cầu Giấy</p>
+          <p class="hotel-desc">Một ngôi nhà trong một khu rất Hà Nội, bản thân nơi ấy cũng đầy kỉ niệm phố phường.</p>
           <ul class="hotel-features">
-            <li>Làng Vòng — nổi tiếng với cốm Hà Nội</li>
-            <li>Gần ĐH Ngoại Ngữ, khu sinh viên sôi động</li>
-            <li>Bếp nấu ăn, không gian gia đình ấm cúng</li>
+            <li>Gần Làng Vòng nổi tiếng với cốm Hà Nội</li>
+            <li>Gần khu làng đại học sinh viên sôi động, quán bình dân</li>
+            <li>Chỗ này có bếp nấu ăn, tủ lạnh, không gian gia đình ấm cúng</li>
             <li>Gần phố Nhà Xanh (~200m) — mua sắm tiện lợi</li>
+            <li>Khách Tây và khách gia đình đặc biệt thích chỗ nhà cô, nhiều người thành khách quen đặt ở nhà cô</li>
           </ul>
           <div class="hotel-price">
-            <span>600k / đêm (phòng đôi)</span>
+            <span>400 - 600k / mỗi phòng đôi có không gian</span>
           </div>
         </div>
+      </div>
+      
+      <!-- Vertical Photo -->
+      <div class="hotel-vertical-photo">
+        <img src="/assets/images/nha-co-lien/vertical.jpg" alt="Nhà cô Liên - Không gian">
+      </div>
+      
+      <!-- View More Photos Button -->
+      <button class="view-gallery-btn" onclick="openGallery()">
+        <span class="gallery-icon">📷</span>
+        Xem thêm ảnh phòng nhà cô
+      </button>
+      
+      <!-- Alternative Option -->
+      <div class="hotel-note">
+        <div class="hotel-note-icon">💡</div>
+        <div class="hotel-note-content">
+          <h4>Phương án thoải mái hơn</h4>
+          <p><strong>Khách sạn Fortuna Hà Nội</strong> — Khách sạn 4 sao, tiện nghi đầy đủ, phù hợp gia đình.</p>
+          <a href="https://maps.app.goo.gl/ata3qwNXXQkFdEiZ7" target="_blank" class="hotel-note-link">Xem trên Google Maps →</a>
+        </div>
+      </div>
+      
+      <!-- Fortuna Hotel Image -->
+      <div class="hotel-fortuna-photo">
+        <img src="/assets/images/nha-co-lien/fortuna.jpg" alt="Khách sạn Fortuna Hà Nội">
       </div>
     </div>
   </section>
@@ -78,7 +105,7 @@
     <div class="container">
       <div class="section-header center">
         <h2>Ngày 1 — Sài Gòn → Hà Nội</h2>
-        <p>Bay sáng sớm 06:00 → Khám phá tuyến Ba Đình + Hồ Tây</p>
+        <p>Bay sáng sớm 06:00 → Tuyến Ba Đình + Hồ Tây → Phố Cổ đêm</p>
       </div>
 
       <div class="timeline">
@@ -87,7 +114,7 @@
           <div class="timeline-time">08:00</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&h=400&fit=crop" alt="Phở Hà Nội">
+              <img src="/assets/images/hanoi-dia-diem/pho-ly-quoc-su.jpg" alt="Phở Lý Quốc Sư">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Ăn sáng</span>
                 <h3>Phở Lý Quốc Sư</h3>
@@ -119,7 +146,7 @@
           <div class="timeline-time">13:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1580139648301-506ae72e4a66?w=600&h=400&fit=crop" alt="Văn Miếu">
+              <img src="/assets/images/hanoi-dia-diem/van-mieu.jpg" alt="Văn Miếu Quốc Tử Giám">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Tham quan</span>
                 <h3>Văn Miếu — Quốc Tử Giám</h3>
@@ -136,7 +163,7 @@
           <div class="timeline-time">14:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1569839333583-7375336cde4b?w=600&h=400&fit=crop" alt="Hoàng Thành Thăng Long">
+              <img src="/assets/images/hanoi-dia-diem/hoang-thanh.webp" alt="Hoàng Thành Thăng Long">
               <div class="timeline-card-body">
                 <span class="timeline-tag">UNESCO</span>
                 <h3>Hoàng Thành Thăng Long</h3>
@@ -153,7 +180,7 @@
           <div class="timeline-time">15:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1584003564911-a7cf89e6d7c6?w=600&h=400&fit=crop" alt="Cột cờ Hà Nội">
+              <img src="/assets/images/hanoi-dia-diem/duong-hoang-dieu.webp" alt="Đường Hoàng Diệu">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Đi bộ</span>
                 <h3>Tuyến Hoàng Diệu — Cây xanh lịch sử</h3>
@@ -170,7 +197,7 @@
           <div class="timeline-time">16:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1555217851-6141535bd771?w=600&h=400&fit=crop" alt="Đường Thanh Niên">
+              <img src="/assets/images/hanoi-dia-diem/duong-thanh-nien.jpg" alt="Đường Thanh Niên">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Ngắm cảnh</span>
                 <h3>Đường Thanh Niên</h3>
@@ -187,7 +214,7 @@
           <div class="timeline-time">17:00</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1571236207108-5b26dd943f8a?w=600&h=400&fit=crop" alt="Chùa Trấn Quốc">
+              <img src="/assets/images/hanoi-dia-diem/chua-tran-quoc.webp" alt="Chùa Trấn Quốc">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Di tích</span>
                 <h3>Chùa Trấn Quốc</h3>
@@ -204,7 +231,7 @@
           <div class="timeline-time">17:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&h=400&fit=crop" alt="Kem Hồ Tây">
+              <img src="/assets/images/hanoi-dia-diem/kem-ho-tay.jpg" alt="Kem Hồ Tây">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Ăn vặt</span>
                 <h3>Dạo Hồ Tây + Kem Hồ Tây</h3>
@@ -216,18 +243,38 @@
           </div>
         </div>
 
-        <!-- Maii Bistro -->
-        <div class="timeline-item">
+        <!-- Phố Cổ -->
+        <div class="timeline-item highlight">
           <div class="timeline-time">19:00</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Maii Bistro">
+              <img src="/assets/images/hanoi-dia-diem/pho-co-36.webp" alt="Phố Cổ 36 Phố Phường">
               <div class="timeline-card-body">
-                <span class="timeline-tag">Ăn tối</span>
-                <h3>Maii Bistro — Đi ăn ven Hồ Tây</h3>
-                <p class="timeline-address">Ven Hồ Tây, Tây Hồ</p>
-                <p>Nhà hàng view Hồ Tây lãng mạn.<br>Không gian ấm cúng, ánh đèn vàng.<br>Thưởng thức bữa tối ngắm hồ về đêm.</p>
-                <span class="timeline-price">200k - 400k/người</span>
+                <span class="timeline-tag highlight-tag">Highlight</span>
+                <h3>Phố Cổ 36 Phố Phường</h3>
+                <p class="timeline-address">Hàng Mã, Hàng Đào, Hàng Bạc, Hàng Buồm...</p>
+                <p>Linh hồn của Hà Nội ngàn năm văn hiến.<br><strong>Hàng Mã:</strong> đèn lồng, đồ trang trí rực rỡ.<br><strong>Hàng Đào:</strong> vải vóc, quần áo truyền thống.<br><strong>Hàng Bạc:</strong> trang sức bạc thủ công.<br><strong>Hàng Buồm:</strong> bánh kẹo, ô mai, đặc sản.<br>Dịp lễ 2/9: đông vui, không khí lễ hội tuyệt vời!</p>
+                <span class="timeline-price">Miễn phí • 1-2 tiếng dạo chơi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ẩm thực đặc trưng -->
+        <div class="timeline-item highlight">
+          <div class="timeline-time">20:00</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <img src="/assets/images/hanoi-dia-diem/bun-cha-obama.jfif" alt="Bún chả Obama">
+              <div class="timeline-card-body">
+                <span class="timeline-tag highlight-tag">Ẩm thực</span>
+                <h3>Ẩm thực đặc trưng Hà Nội</h3>
+                <p class="timeline-address">Khu vực Phố Cổ</p>
+                <p>Chọn 1-2 món để thử tối nay:<br><br>
+                <strong>Bún chả Hương Liên (Obama)</strong><br>24 Lê Văn Hưu — Nơi Obama từng ăn cùng Anthony Bourdain. 40-60k/suất.<br><br>
+                <strong>Phở Thìn</strong><br>13 Lò Đúc — Phở bò tái lăn huyền thoại, nước dùng đậm đà. 50-70k/tô.<br><br>
+                <strong>Cà phê trứng Giảng</strong><br>39 Nguyễn Hữu Huân — Cà phê trứng nguyên bản từ 1946. 35-55k/ly.</p>
+                <span class="timeline-price">Tổng ~100-150k/người</span>
               </div>
             </div>
           </div>
@@ -235,33 +282,16 @@
 
         <!-- Về nhà -->
         <div class="timeline-item">
-          <div class="timeline-time">20:00</div>
+          <div class="timeline-time">21:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop" alt="Hà Nội về đêm">
+              <img src="/assets/images/hanoi-dia-diem/duong-ve-nha.jpg" alt="Đường về nhà">
               <div class="timeline-card-body">
-                <span class="timeline-tag">Di chuyển</span>
-                <h3>Tuyến về nhà — Ngắm cảnh trên xe</h3>
-                <p class="timeline-address">Hồ Tây → Kim Mã → Cầu Giấy → Nhà cô Liên</p>
-                <p>Đường Kim Mã: Đại sứ quán, khách sạn 5 sao, Keangnam.<br>Đường Cầu Giấy: ĐH Quốc gia, tòa nhà văn phòng hiện đại.<br>Ngồi xe chạy chậm, ngắm Hà Nội về đêm.</p>
-                <span class="timeline-price">~30 phút</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phố Nhà Xanh -->
-        <div class="timeline-item highlight">
-          <div class="timeline-time">21:00</div>
-          <div class="timeline-content">
-            <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop" alt="Phố Nhà Xanh">
-              <div class="timeline-card-body">
-                <span class="timeline-tag highlight-tag">Mua sắm</span>
-                <h3>Phố Nhà Xanh — Thiên đường mua sắm</h3>
-                <p class="timeline-address">Phố Nhà Xanh, Cầu Giấy (cách nhà ~200m)</p>
-                <p>Khu mua sắm sinh viên nổi tiếng Hà Nội.<br>Quần áo 50k-200k, giày dép 80k-300k, phụ kiện 20k-100k.<br>Giá sinh viên, có thể trả giá (mặc cả bớt 20-30%).<br>Ăn vặt: trà sữa, bánh tráng trộn, ốc.</p>
-                <span class="timeline-price">Giờ đông: 19:00 - 22:00</span>
+                <span class="timeline-tag">Về nhà</span>
+                <h3>Về nhà cô Liên — Nghỉ ngơi</h3>
+                <p class="timeline-address">Phố Cổ → Cầu Giấy (~30-40 phút)</p>
+                <p>Ngắm Hà Nội về đêm trên đường về.<br>Về sớm hơn Phương án 1 → nghỉ ngơi tốt hơn.<br>Chuẩn bị năng lượng cho Ngày 2!</p>
+                <span class="timeline-price">22:00 - 22:30 ngủ</span>
               </div>
             </div>
           </div>
@@ -275,7 +305,7 @@
     <div class="container">
       <div class="section-header center">
         <h2>Ngày 2 — Hà Nội → Bay về</h2>
-        <p>Sáng tự do — Chiều Hồ Gươm + Phố Cổ — Tối bay về</p>
+        <p>Sáng tự do — Chiều Hồ Gươm — Tối Maii Bistro → Bay về</p>
       </div>
 
       <!-- Buổi sáng tự do -->
@@ -297,7 +327,7 @@
               <li><strong>Cốm Làng Vòng</strong> — Ngay gần nhà! Cốm tươi 150k-200k/kg (mùa T8-T11), đặc sản chỉ có mùa này</li>
               <li><strong>Chợ Cầu Giấy</strong> — Đồ tươi sống, ô mai, bánh cốm, kẹo lạc</li>
               <li><strong>Vincom Cầu Giấy</strong> — Mall gần, AC mát, ăn uống đa dạng</li>
-              <li><strong>Lotte Mall</strong> (54 Liễu Giai) — Mall cao cấp + Observation Deck tầng 65</li>
+              <li><strong>Phố Nhà Xanh</strong> — Mua sắm giá sinh viên, quần áo 50-200k</li>
             </ul>
           </div>
         </div>
@@ -309,7 +339,7 @@
           <div class="timeline-time">14:00</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600&h=400&fit=crop" alt="Nhà Thờ Lớn Hà Nội">
+              <img src="/assets/images/hanoi-dia-diem/nha-tho-lon.jpg" alt="Nhà Thờ Lớn Hà Nội">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Check-in</span>
                 <h3>Nhà Thờ Lớn Hà Nội</h3>
@@ -326,7 +356,7 @@
           <div class="timeline-time">14:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600&h=400&fit=crop" alt="Hồ Hoàn Kiếm">
+              <img src="/assets/images/hanoi-dia-diem/ho-hoan-kiem.webp" alt="Hồ Hoàn Kiếm">
               <div class="timeline-card-body">
                 <span class="timeline-tag">Tham quan</span>
                 <h3>Hồ Hoàn Kiếm + Đền Ngọc Sơn</h3>
@@ -339,13 +369,13 @@
         </div>
 
         <!-- Phố đi bộ -->
-        <div class="timeline-item highlight">
+        <div class="timeline-item">
           <div class="timeline-time">15:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&h=400&fit=crop" alt="Phố đi bộ Hồ Gươm">
+              <img src="/assets/images/hanoi-dia-diem/pho-di-bo.webp" alt="Phố đi bộ Hồ Gươm">
               <div class="timeline-card-body">
-                <span class="timeline-tag highlight-tag">Lễ hội</span>
+                <span class="timeline-tag">Lễ hội</span>
                 <h3>Phố Đi Bộ Hồ Gươm</h3>
                 <p class="timeline-address">Quanh Hồ Hoàn Kiếm</p>
                 <p>Dịp lễ: mở cả ngày, chương trình văn nghệ đặc biệt!<br>Đi bộ tự do, biểu diễn đường phố, trò chơi dân gian.<br>Ghé: Kem Tràng Tiền (15-20k), Cà phê trứng Giảng (35-55k).<br>Không khí lễ hội, đông vui, rất Hà Nội!</p>
@@ -355,18 +385,51 @@
           </div>
         </div>
 
-        <!-- Namaste -->
-        <div class="timeline-item">
-          <div class="timeline-time">17:30</div>
+        <!-- Maii Bistro -->
+        <div class="timeline-item highlight">
+          <div class="timeline-time">17:00</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=400&fit=crop" alt="Namaste Indian Restaurant">
+              <img src="/assets/images/hanoi-dia-diem/maii-bistro.png" alt="Maii Bistro">
               <div class="timeline-card-body">
-                <span class="timeline-tag">Ăn tối</span>
-                <h3>Namaste — Ẩm thực Ấn Độ</h3>
-                <p class="timeline-address">46 Tho Nhuom, Hoàn Kiếm</p>
-                <p>Ẩm thực Ấn Độ chính thống, không gian ấm cúng.<br>Món nên thử: Butter Chicken, Naan, Biryani, Lassi.<br>Trải nghiệm ẩm thực khác biệt cuối chuyến đi!</p>
-                <span class="timeline-price">150k - 300k/người</span>
+                <span class="timeline-tag highlight-tag">Ăn tối</span>
+                <h3>Maii Bistro — Ăn tối ven Hồ Tây</h3>
+                <p class="timeline-address">Ven Hồ Tây, Tây Hồ</p>
+                <p>Bữa tối lãng mạn trước khi bay về.<br>Nhà hàng view Hồ Tây tuyệt đẹp, không gian ấm cúng.<br>Thưởng thức món ngon, ngắm hoàng hôn Hồ Tây.<br><strong>Nên đặt bàn trước dịp lễ!</strong></p>
+                <span class="timeline-price">200k - 400k/người • 1.5 tiếng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Về nhà dọn đồ -->
+        <div class="timeline-item">
+          <div class="timeline-time">18:30</div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <img src="/assets/images/nha-co-lien/main.jpg" alt="Nhà cô Liên">
+              <div class="timeline-card-body">
+                <span class="timeline-tag">Chuẩn bị</span>
+                <h3>Về nhà cô Liên — Dọn đồ, trả phòng</h3>
+                <p class="timeline-address">Maii Bistro → Cầu Giấy (~15-20 phút)</p>
+                <p>Thu xếp hành lý, kiểm tra đồ đạc.<br>Cảm ơn cô Liên, chào tạm biệt.<br>Chuẩn bị sẵn sàng ra sân bay.</p>
+                <span class="timeline-price">~30 phút</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ra sân bay -->
+        <div class="timeline-item">
+          <div class="timeline-time">21:30</div>
+          <div class="timeline-content">
+            <div class="timeline-card rest-card">
+              <div class="timeline-card-body">
+                <span class="timeline-tag">Di chuyển</span>
+                <h3>Ra sân bay Nội Bài</h3>
+                <p class="timeline-address">Cầu Giấy → Nội Bài (~40-50 phút)</p>
+                <p>Dư thời gian check-in, mua đồ duty-free.<br>Không lo trễ máy bay dịp lễ đông!</p>
+                <span class="timeline-price">Đến sân bay ~22:20</span>
               </div>
             </div>
           </div>
@@ -374,15 +437,15 @@
 
         <!-- Bay về -->
         <div class="timeline-item">
-          <div class="timeline-time">20:00</div>
+          <div class="timeline-time">23:30</div>
           <div class="timeline-content">
             <div class="timeline-card">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop" alt="Bay về">
+              <img src="/assets/images/hanoi-dia-diem/san-bay-noi-bai.jpg" alt="Bay về Sài Gòn">
               <div class="timeline-card-body">
-                <span class="timeline-tag">Di chuyển</span>
-                <h3>Ra sân bay — Bay về Sài Gòn</h3>
-                <p class="timeline-address">Sân bay Nội Bài</p>
-                <p>19:00 về nhà cô Liên, dọn đồ, trả phòng.<br>Cầu Giấy → Nội Bài: ~40-50 phút.<br>Bay 22:00 về Sài Gòn.<br>Hành lý ký gửi nếu mua nhiều quà!</p>
+                <span class="timeline-tag">Bay về</span>
+                <h3>Bay về Sài Gòn</h3>
+                <p class="timeline-address">Nội Bài → Tân Sơn Nhất</p>
+                <p>Chuyến bay đêm ~2 tiếng.<br>Về đến Sài Gòn khoảng 01:30.<br>Kết thúc hành trình 2N1Đ Hà Nội!</p>
                 <span class="timeline-price">Kết thúc hành trình</span>
               </div>
             </div>
@@ -401,37 +464,49 @@
       </div>
       <div class="gifts-grid">
         <div class="gift-card">
-          <span class="gift-icon">🌾</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);">
+            <span class="gift-emoji">🌾</span>
+          </div>
           <h4>Cốm Làng Vòng</h4>
           <p>Đặc sản mùa thu, chỉ có T8-T11</p>
           <span class="gift-price">150k - 200k/kg</span>
         </div>
         <div class="gift-card">
-          <span class="gift-icon">🍡</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+            <span class="gift-emoji">🍡</span>
+          </div>
           <h4>Bánh cốm Nguyên Ninh</h4>
           <p>11 Hàng Than</p>
           <span class="gift-price">50k/hộp</span>
         </div>
         <div class="gift-card">
-          <span class="gift-icon">🍬</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <span class="gift-emoji">🍬</span>
+          </div>
           <h4>Ô mai Hồng Lam</h4>
           <p>11 Hàng Đường</p>
           <span class="gift-price">80k - 150k/hộp</span>
         </div>
         <div class="gift-card">
-          <span class="gift-icon">🥜</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);">
+            <span class="gift-emoji">🥜</span>
+          </div>
           <h4>Kẹo lạc, kẹo dồi</h4>
           <p>Đặc sản Hà Nội</p>
           <span class="gift-price">50k - 80k/gói</span>
         </div>
         <div class="gift-card">
-          <span class="gift-icon">🍵</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+            <span class="gift-emoji">🪷</span>
+          </div>
           <h4>Trà sen Tây Hồ</h4>
           <p>Ướp từ nhị sen Hồ Tây</p>
           <span class="gift-price">200k - 500k/hộp</span>
         </div>
         <div class="gift-card">
-          <span class="gift-icon">☕</span>
+          <div class="gift-image" style="background: linear-gradient(135deg, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%);">
+            <span class="gift-emoji">☕</span>
+          </div>
           <h4>Cà phê Cộng</h4>
           <p>Đóng gói làm quà</p>
           <span class="gift-price">100k/gói</span>
@@ -443,43 +518,192 @@
   <!-- Budget -->
   <section class="budget-section">
     <div class="container">
-      <div class="section-header center">
-        <h2>Ngân sách dự kiến</h2>
-        <p>Chi phí trung bình mỗi người — 2 ngày 1 đêm</p>
-      </div>
-      <div class="budget-table">
-        <div class="budget-row">
-          <span class="budget-item">Vé máy bay khứ hồi SG↔HN</span>
-          <span class="budget-cost">4,000,000</span>
+      <details class="budget-collapse">
+        <summary class="budget-header">
+          <div class="section-header center">
+            <h2>Ngân sách dự kiến</h2>
+            <p>Chi phí trung bình mỗi người — 2 ngày 1 đêm</p>
+          </div>
+          <span class="budget-toggle">Click để xem chi tiết ▼</span>
+        </summary>
+        <div class="budget-table">
+          <div class="budget-row">
+            <span class="budget-item">Vé máy bay khứ hồi SG↔HN</span>
+            <span class="budget-cost">4,000,000</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-item">Nhà cô Liên (giá mỗi phòng đôi)</span>
+            <span class="budget-cost">600,000</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-item">Ăn uống (2 ngày)</span>
+            <span class="budget-cost">800,000</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-item">Di chuyển (rẻ vì mình ở gần điểm đến)</span>
+            <span class="budget-cost">400,000</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-item">Vé tham quan các nơi</span>
+            <span class="budget-cost">100,000</span>
+          </div>
+          <div class="budget-row">
+            <span class="budget-item">Mua sắm, quà</span>
+            <span class="budget-cost">Tùy nhu cầu</span>
+          </div>
+          <div class="budget-row total">
+            <span class="budget-item">TỔNG (chưa gồm mua sắm)</span>
+            <span class="budget-cost">~5,900,000</span>
+          </div>
         </div>
-        <div class="budget-row">
-          <span class="budget-item">Nhà cô Liên (giá mỗi phòng đôi)</span>
-          <span class="budget-cost">600,000</span>
-        </div>
-        <div class="budget-row">
-          <span class="budget-item">Ăn uống (2 ngày)</span>
-          <span class="budget-cost">800,000</span>
-        </div>
-        <div class="budget-row">
-          <span class="budget-item">Di chuyển (rẻ vì mình ở gần điểm đến)</span>
-          <span class="budget-cost">400,000</span>
-        </div>
-        <div class="budget-row">
-          <span class="budget-item">Vé tham quan các nơi</span>
-          <span class="budget-cost">100,000</span>
-        </div>
-        <div class="budget-row">
-          <span class="budget-item">Mua sắm, quà</span>
-          <span class="budget-cost">Tùy nhu cầu</span>
-        </div>
-        <div class="budget-row total">
-          <span class="budget-item">TỔNG (chưa gồm mua sắm)</span>
-          <span class="budget-cost">~5,900,000</span>
-        </div>
-      </div>
+      </details>
     </div>
   </section>
 
+  <!-- Gallery Popup -->
+  <div class="gallery-overlay" id="galleryOverlay" onclick="closeGallery(event)">
+    <div class="gallery-popup">
+      <button class="gallery-close" onclick="closeGallery()">&times;</button>
+      <h3>Ảnh phòng nhà cô Liên</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="/assets/images/nha-co-lien/2 nha co Lien phong doi lon.jpg" alt="Phòng đôi lớn">
+          <span>Phòng đôi lớn</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="/assets/images/nha-co-lien/2 nha co Lien phong doi.jpg" alt="Phòng đôi">
+          <span>Phòng đôi</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="/assets/images/nha-co-lien/2 nha co lien phong doom.jpg" alt="Phòng dorm">
+          <span>Phòng dorm</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="/assets/images/nha-co-lien/2 nha co lien phong tam.jpg" alt="Phòng tắm">
+          <span>Phòng tắm</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)">
+          <img src="/assets/images/nha-co-lien/2 nha co lien buc thu.JPG" alt="Bức thư">
+          <span>Bức thư của khách</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)">
+          <img src="/assets/images/nha-co-lien/IMG20230202100518.jpg" alt="Không gian 1">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(6)">
+          <img src="/assets/images/nha-co-lien/IMG20230202230231.jpg" alt="Không gian 2">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(7)">
+          <img src="/assets/images/nha-co-lien/IMG20230202231245.jpg" alt="Không gian 3">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(8)">
+          <img src="/assets/images/nha-co-lien/IMG20230202231739.jpg" alt="Không gian 4">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(9)">
+          <img src="/assets/images/nha-co-lien/IMG20230202233113.jpg" alt="Không gian 5">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(10)">
+          <img src="/assets/images/nha-co-lien/IMG20230202233502.jpg" alt="Không gian 6">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(11)">
+          <img src="/assets/images/nha-co-lien/IMG20230202234056.jpg" alt="Không gian 7">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(12)">
+          <img src="/assets/images/nha-co-lien/IMG20230202234115.jpg" alt="Không gian 8">
+          <span>Không gian</span>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(13)">
+          <img src="/assets/images/nha-co-lien/IMG20230202234259.jpg" alt="Không gian 9">
+          <span>Không gian</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="prevImage(event)">&#10094;</button>
+    <img src="" alt="" id="lightboxImg">
+    <button class="lightbox-next" onclick="nextImage(event)">&#10095;</button>
+  </div>
+
   <script src="/js/main.js"></script>
+  <script>
+    // Gallery images
+    const galleryImages = [
+      '/assets/images/nha-co-lien/2 nha co Lien phong doi lon.jpg',
+      '/assets/images/nha-co-lien/2 nha co Lien phong doi.jpg',
+      '/assets/images/nha-co-lien/2 nha co lien phong doom.jpg',
+      '/assets/images/nha-co-lien/2 nha co lien phong tam.jpg',
+      '/assets/images/nha-co-lien/2 nha co lien buc thu.JPG',
+      '/assets/images/nha-co-lien/IMG20230202100518.jpg',
+      '/assets/images/nha-co-lien/IMG20230202230231.jpg',
+      '/assets/images/nha-co-lien/IMG20230202231245.jpg',
+      '/assets/images/nha-co-lien/IMG20230202231739.jpg',
+      '/assets/images/nha-co-lien/IMG20230202233113.jpg',
+      '/assets/images/nha-co-lien/IMG20230202233502.jpg',
+      '/assets/images/nha-co-lien/IMG20230202234056.jpg',
+      '/assets/images/nha-co-lien/IMG20230202234115.jpg',
+      '/assets/images/nha-co-lien/IMG20230202234259.jpg'
+    ];
+    let currentImageIndex = 0;
+
+    function openGallery() {
+      document.getElementById('galleryOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery(event) {
+      if (!event || event.target.id === 'galleryOverlay') {
+        document.getElementById('galleryOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      img.src = galleryImages[index];
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox(event) {
+      if (!event || event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('active');
+      }
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('lightbox').classList.contains('active')) {
+        if (e.key === 'ArrowLeft') prevImage(e);
+        if (e.key === 'ArrowRight') nextImage(e);
+        if (e.key === 'Escape') closeLightbox();
+      }
+      if (document.getElementById('galleryOverlay').classList.contains('active')) {
+        if (e.key === 'Escape') closeGallery();
+      }
+    });
+  </script>
 </body>
 </html>
