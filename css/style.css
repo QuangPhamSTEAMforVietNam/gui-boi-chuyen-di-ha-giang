@@ -169,7 +169,7 @@ ul {
 
 .hero-content h1 {
   font-family: var(--font-display);
-  font-size: 84px;
+  font-size: clamp(36px, 8vw, 84px);
   font-weight: 400;
   color: var(--color-white);
   line-height: 1.1;
@@ -177,13 +177,13 @@ ul {
 }
 
 .hero-highlight {
-  font-size: 140px;
+  font-size: clamp(56px, 14vw, 140px);
   display: block;
   line-height: 1;
 }
 
 .hero-content p {
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px);
   color: var(--color-white);
   opacity: 0.8;
 }
@@ -843,10 +843,6 @@ ul {
     --container-padding: 100px;
   }
   
-  .hero-content h1 {
-    font-size: 72px;
-  }
-  
   .section-header h2 {
     font-size: 54px;
   }
@@ -860,10 +856,6 @@ ul {
   :root {
     --container-padding: 60px;
     --section-gap: 80px;
-  }
-  
-  .hero-content h1 {
-    font-size: 60px;
   }
   
   .section-header h2 {
@@ -905,10 +897,6 @@ ul {
   
   .mobile-menu-btn {
     display: flex;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
   }
   
   .hero-content p {
@@ -995,10 +983,6 @@ ul {
   :root {
     --container-padding: 20px;
     --section-gap: 48px;
-  }
-  
-  .hero-content h1 {
-    font-size: 36px;
   }
   
   .section-header h2 {
