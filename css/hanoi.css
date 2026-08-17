@@ -5,11 +5,7 @@
 
 /* === Hero Hanoi === */
 .hero-hanoi {
-  background: linear-gradient(
-    135deg,
-    rgba(23, 36, 50, 0.85) 0%,
-    rgba(232, 96, 76, 0.7) 100%
-  ), url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1920&h=1080&fit=crop');
+  /* Background is set by .hero-hanoi2 */
   background-size: cover;
   background-position: center;
   min-height: 60vh;
