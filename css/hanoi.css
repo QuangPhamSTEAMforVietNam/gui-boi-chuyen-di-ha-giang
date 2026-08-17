@@ -970,7 +970,7 @@
     135deg,
     rgba(23, 36, 50, 0.6) 0%,
     rgba(46, 125, 50, 0.5) 100%
-  ), url('/assets/images/hanoi-dia-diem/landing-page.jpg');
+  ), url('../assets/images/hanoi-dia-diem/landing-page.jpg');
   background-size: cover;
   background-position: center;
 }
