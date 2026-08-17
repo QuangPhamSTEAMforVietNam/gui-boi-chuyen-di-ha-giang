@@ -1156,13 +1156,22 @@
   background: linear-gradient(135deg, #fdf8f6 0%, #fff5f2 100%);
 }
 
+.blog-section .container {
+  display: block !important;
+  column-count: 1 !important;
+  columns: unset !important;
+}
+
 .blog-content {
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 48px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  display: block !important;
+  column-count: 1 !important;
+  columns: unset !important;
 }
 
 .blog-content p {
