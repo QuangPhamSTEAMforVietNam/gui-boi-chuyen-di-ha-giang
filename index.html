@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
   <!-- Header -->
@@ -321,6 +322,40 @@
       </div>
   </section>
 
+  <!-- Lộ trình tham quan -->
+  <section class="route-map">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Lộ trình tham quan</h2>
+          <p>Hành trình khám phá Hà Giang</p>
+        </div>
+      </div>
+      <div class="route-stops">
+        <div class="route-stop"><span class="stop-num">1</span> Cổng Trời Quản Bạ</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">2</span> Dốc Chín Khoanh</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">3</span> Làng Lũng Cẩm</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">4</span> Nhà của Pao</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">5</span> Dinh thự nhà họ Vương</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">6</span> Phố cổ Đồng Văn</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">7</span> Làng Lô Lô Chải</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">8</span> Cột cờ Lũng Cú</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">9</span> Thèn Pả</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-stop"><span class="stop-num">10</span> Đèo Mã Pí Lèng</div>
+      </div>
+      <div id="hagiang-map" style="width: 100%; height: 500px; border-radius: 12px; margin-top: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);"></div>
+    </div>
+  </section>
+
   <!-- Chia sẻ cho bạn bè -->
   <section class="special-offer">
     <div class="container">
@@ -357,6 +392,31 @@
   </section>
 
   <style>
+    /* Route stops */
+    .route-map { padding: 80px 0; background: #f8f9fa; }
+    .route-stops {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 8px; margin-top: 24px;
+    }
+    .route-stop {
+      background: #fff; border: 2px solid #E8604C; border-radius: 24px;
+      padding: 8px 18px; font-size: 14px; font-weight: 500;
+      color: #172432; display: flex; align-items: center; gap: 8px;
+    }
+    .stop-num {
+      background: #E8604C; color: #fff; width: 24px; height: 24px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; flex-shrink: 0;
+    }
+    .route-arrow { color: #E8604C; font-size: 18px; font-weight: bold; }
+    @media (max-width: 768px) {
+      .route-map { padding: 48px 0; }
+      .route-stops { gap: 6px; }
+      .route-stop { font-size: 12px; padding: 6px 12px; }
+      .route-arrow { font-size: 14px; }
+      #hagiang-map { height: 350px !important; }
+    }
+
     /* Audio player indicator */
     [data-audio] { position: relative; }
     [data-audio] img { cursor: pointer; }
@@ -375,6 +435,58 @@
       50% { opacity: 0.7; }
     }
   </style>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Ha Giang route map
+    (function() {
+      var map = L.map('hagiang-map').setView([23.15, 105.3], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      var stops = [
+        { name: '1. Cổng Trời Quản Bạ', lat: 23.0742, lng: 104.9883 },
+        { name: '2. Dốc Chín Khoanh', lat: 23.1350, lng: 105.1050 },
+        { name: '3. Làng Lũng Cẩm', lat: 23.1567, lng: 105.2350 },
+        { name: '4. Nhà của Pao', lat: 23.1600, lng: 105.2400 },
+        { name: '5. Dinh thự nhà họ Vương', lat: 23.1433, lng: 105.2167 },
+        { name: '6. Phố cổ Đồng Văn', lat: 23.2767, lng: 105.3633 },
+        { name: '7. Làng Lô Lô Chải', lat: 23.3567, lng: 105.3150 },
+        { name: '8. Cột cờ Lũng Cú', lat: 23.3642, lng: 105.3008 },
+        { name: '9. Thèn Pả', lat: 23.3200, lng: 105.3100 },
+        { name: '10. Đèo Mã Pí Lèng', lat: 23.2217, lng: 105.4100 }
+      ];
+
+      var redIcon = L.divIcon({
+        className: 'custom-marker',
+        html: '<div style="background:#E8604C;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);"></div>',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+
+      var latlngs = [];
+      stops.forEach(function(stop, i) {
+        var icon = L.divIcon({
+          className: 'custom-marker',
+          html: '<div style="background:#E8604C;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);">' + (i+1) + '</div>',
+          iconSize: [28, 28],
+          iconAnchor: [14, 14]
+        });
+        L.marker([stop.lat, stop.lng], { icon: icon })
+          .addTo(map)
+          .bindPopup('<strong>' + stop.name + '</strong>');
+        latlngs.push([stop.lat, stop.lng]);
+      });
+
+      // Draw route line
+      L.polyline(latlngs, { color: '#E8604C', weight: 3, opacity: 0.8, dashArray: '8, 8' }).addTo(map);
+
+      // Fit map to show all markers
+      map.fitBounds(L.latLngBounds(latlngs).pad(0.1));
+    })();
+  </script>
 
   <script>
     // Audio interaction system
