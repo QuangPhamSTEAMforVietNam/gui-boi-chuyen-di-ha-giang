@@ -47,7 +47,7 @@
   </section>
 
   <!-- Popular Destinations -->
-  <section class="destinations">
+  <section class="destinations" data-audio="/assets/audio/0.mp3">
     <div class="container">
       <div class="section-header">
         <div>
@@ -137,7 +137,7 @@
   </section>
 
   <!-- Special Offer -->
-  <section class="special-offer">
+  <section class="special-offer" data-audio="/assets/audio/1.mp3">
     <div class="container">
       <div class="section-header">
         <div>
@@ -207,7 +207,7 @@
     <div class="container">
 
       <!-- Entry 1: image left, text right -->
-      <div class="blog-content">
+      <div class="blog-content" data-audio="/assets/audio/2.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/1.JPG" alt="Gửi em 1">
         </div>
@@ -218,7 +218,7 @@
       </div>
 
       <!-- Entry 2: text left, image right -->
-      <div class="blog-content reverse">
+      <div class="blog-content reverse" data-audio="/assets/audio/3.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/2.jpg" alt="Gửi em 2">
         </div>
@@ -229,7 +229,7 @@
       </div>
 
       <!-- Entry 3: image left, text right -->
-      <div class="blog-content">
+      <div class="blog-content" data-audio="/assets/audio/4.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/3.JPG" alt="Gửi em 3">
         </div>
@@ -240,7 +240,7 @@
       </div>
 
       <!-- Entry 4: text left, image right -->
-      <div class="blog-content reverse">
+      <div class="blog-content reverse" data-audio="/assets/audio/5.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/4 1.jpg" alt="Gửi em 4">
         </div>
@@ -251,7 +251,7 @@
       </div>
 
       <!-- Entry 5: image left, text right -->
-      <div class="blog-content">
+      <div class="blog-content" data-audio="/assets/audio/6.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/5.jpg" alt="Gửi em 5">
         </div>
@@ -262,7 +262,7 @@
       </div>
 
       <!-- Entry 6: text left, image right -->
-      <div class="blog-content reverse">
+      <div class="blog-content reverse" data-audio="/assets/audio/7.mp3">
         <div class="blog-image">
           <img src="/assets/images/guiem/6.jpg" alt="Gửi em 6">
         </div>
@@ -276,7 +276,7 @@
   </section>
 
   <!-- Mọi người ở Hà Giang -->
-  <section class="ha-giang-people">
+  <section class="ha-giang-people" data-audio="/assets/audio/8.mp3">
     <div class="container">
       <div class="section-header center">
         <h2>Mọi người ở Hà Giang</h2>
@@ -355,6 +355,114 @@
       </div>
     </div>
   </section>
+
+  <style>
+    /* Audio player indicator */
+    [data-audio] { position: relative; }
+    [data-audio] img { cursor: pointer; }
+    .audio-playing { outline: 3px solid #E8604C; outline-offset: -3px; border-radius: 8px; }
+    .audio-badge {
+      position: absolute; top: 12px; right: 12px; z-index: 10;
+      background: #E8604C; color: #fff; border-radius: 20px;
+      padding: 6px 14px; font-size: 13px; font-family: var(--font-body);
+      display: flex; align-items: center; gap: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); pointer-events: none;
+      animation: audioPulse 1.5s ease-in-out infinite;
+    }
+    .audio-badge svg { width: 16px; height: 16px; }
+    @keyframes audioPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+
+  <script>
+    // Audio interaction system
+    (function() {
+      let currentAudio = null;
+      let currentElement = null;
+      let currentBadge = null;
+
+      function stopCurrent() {
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+          currentAudio = null;
+        }
+        if (currentElement) {
+          currentElement.classList.remove('audio-playing');
+          currentElement = null;
+        }
+        if (currentBadge) {
+          currentBadge.remove();
+          currentBadge = null;
+        }
+      }
+
+      function createBadge() {
+        const badge = document.createElement('div');
+        badge.className = 'audio-badge';
+        badge.innerHTML = '<svg viewBox="0 0 24 24" fill="white"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg> Đang phát';
+        return badge;
+      }
+
+      // Click handler for images inside audio sections
+      document.addEventListener('click', function(e) {
+        const img = e.target.closest('[data-audio] img');
+        if (!img) return;
+
+        const section = img.closest('[data-audio]');
+        if (!section) return;
+
+        const audioSrc = section.getAttribute('data-audio');
+
+        // If clicking same section that's playing, toggle off
+        if (currentElement === section && currentAudio && !currentAudio.paused) {
+          stopCurrent();
+          return;
+        }
+
+        // Stop any current audio
+        stopCurrent();
+
+        // Play new audio
+        const audio = new Audio(audioSrc);
+        currentAudio = audio;
+        currentElement = section;
+
+        // Add visual indicator
+        section.classList.add('audio-playing');
+        const badge = createBadge();
+        // For blog-content, add badge to blog-image; for sections, add to first image parent
+        const imgContainer = img.closest('.blog-image') || img.closest('.destination-card') || img.closest('.offer-card') || img.parentElement;
+        imgContainer.style.position = 'relative';
+        imgContainer.appendChild(badge);
+        currentBadge = badge;
+
+        audio.play().catch(function() {
+          stopCurrent();
+        });
+
+        audio.addEventListener('ended', function() {
+          stopCurrent();
+        });
+      });
+
+      // IntersectionObserver: stop audio when section scrolls out of view
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting && currentElement === entry.target) {
+            stopCurrent();
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe all audio sections
+      document.querySelectorAll('[data-audio]').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
 
   <script src="/js/main.js"></script>
 </body>
