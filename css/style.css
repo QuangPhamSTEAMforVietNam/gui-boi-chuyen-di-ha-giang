@@ -337,17 +337,45 @@ ul {
   overflow: hidden;
   aspect-ratio: 3/4;
   cursor: pointer;
+  border: 3px solid rgba(232, 96, 76, 0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.destination-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 30px rgba(232, 96, 76, 0.25);
 }
 
 .destination-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s;
+  transition: transform 6s ease;
+  animation: slowPan 20s ease-in-out infinite alternate;
+}
+
+.destination-card:nth-child(odd) img {
+  animation-name: slowPanUp;
+}
+
+.destination-card:nth-child(even) img {
+  animation-name: slowPanDown;
 }
 
 .destination-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  animation-play-state: paused;
+}
+
+@keyframes slowPanUp {
+  0% { transform: scale(1.05) translateY(2%); }
+  100% { transform: scale(1.05) translateY(-2%); }
+}
+
+@keyframes slowPanDown {
+  0% { transform: scale(1.05) translateY(-2%); }
+  100% { transform: scale(1.05) translateY(2%); }
 }
 
 .destination-overlay {
@@ -376,7 +404,26 @@ ul {
 .special-offer {
   padding: var(--section-gap) 0;
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
 }
+
+.special-offer::before {
+  content: '🍜 🥢 😋 🍲 🔥 ❤️ 🍜 🥢 😋 🍲 🔥 ❤️ 🍜 🥢 😋 🍲';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  font-size: 48px;
+  line-height: 80px;
+  letter-spacing: 24px;
+  word-spacing: 16px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.special-offer > .container { position: relative; z-index: 1; }
 
 .offers-grid {
   display: grid;
@@ -390,6 +437,29 @@ ul {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s;
+  position: relative;
+}
+
+.offer-card::after {
+  content: '😋';
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+  transform: scale(0.5) rotate(-20deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.offer-card:nth-child(1)::after { content: '🥰'; }
+.offer-card:nth-child(2)::after { content: '🤤'; }
+.offer-card:nth-child(3)::after { content: '😍'; }
+.offer-card:nth-child(4)::after { content: '🔥'; }
+
+.offer-card:hover::after {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 .offer-card:hover {
@@ -517,7 +587,26 @@ ul {
 /* === Ha Giang People === */
 .ha-giang-people {
   padding: var(--section-gap) 0;
+  position: relative;
+  overflow: hidden;
 }
+
+.ha-giang-people::before {
+  content: '🏔️ 💚 🌿 👩‍🏫 ✨ 🤗 🏔️ 💚 🌿 👩‍🏫 ✨ 🤗 🏔️ 💚 🌿 👩‍🏫';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  font-size: 48px;
+  line-height: 80px;
+  letter-spacing: 24px;
+  word-spacing: 16px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.ha-giang-people > .container { position: relative; z-index: 1; }
 
 .ha-giang-people .blog-content {
   grid-template-columns: 1fr;
